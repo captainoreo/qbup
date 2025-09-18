@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simplified Site</title>
+    <link rel="icon" href="New_Nintendo_3DS.ico" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'PopHappiness', 'Arial', sans-serif;
+        background-color: #e6e8e7;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      
+      @font-face {
+        font-family: 'PopHappiness';
+        src: url('PopHappiness.OTF') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .game-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+        justify-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .game-button {
+        width: 160px;
+        height: 80px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+      .game-button:hover,
+      .game-button:focus {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 161, 223, 0.7);
+        outline: none;
+      }
+
+      .game-button:active {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(0, 161, 223, 0.4);
+      }
+      
+      .game-button.large {
+        grid-column: span 2;
+        width: 340px;
+      }
+
+      .game-button.special {
+        color: white;
+      }
+
+      .game-button.blue {
+        background-color: #0087c0;
+      }
+
+      .game-button.green {
+        background-color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-buttons-container">
+      <nav class="game-buttons" aria-label="Game navigation">
+        <a data-href="EmulatorJS.html" class="game-button" title="EmulatorJS">EmulatorJS</a>
+        <a data-href="Roms.html" class="game-button" title="Roms">Roms</a>
+        <a data-href="Sage_2019_plus.html" class="game-button" title="Sage 2019 plus">Sage 2019 plus</a>
+        <a data-href="Pizza_Tower.html" class="game-button blue" title="Pizza Tower">Pizza Tower</a>
+        <a data-href="SuperBoNoise.html" class="game-button green" title="Super Bo Noise">Super Bo Noise</a>
+        <a data-href="Undertale.html" class="game-button" title="Undertale">Undertale</a>
+        <a data-href="Cave_Story.html" class="game-button" title="Cave Story">Cave Story</a>
+        <a data-href="FnafCollection.html" class="game-button" title="Fnaf All Stars">Fnaf All Stars</a>
+        <a data-href="Super_mario_kart_ZX.html" class="game-button" title="Super mario kart ZX">Super mario kart ZX</a>
+        <a data-href="Deltarune.html" class="game-button" title="Deltarune">Deltarune</a>
+        <a data-href="Web_Fishing.html" class="game-button" title="Web Fishing">Web Fishing</a>
+        <a data-href="Duck.html" class="game-button" title="Duck">Duck</a>
+        <a data-href="Slender.html" class="game-button" title="Slender">Slender</a>
+        <a data-href="Club_Penguin.html" class="game-button" title="Club Penguin">Club Penguin</a>
+        <a data-href="Sonic4.html" class="game-button" title="Sonic 4">Sonic 4</a>
+        <a data-href="Cookie_Clicker.html" class="game-button" title="Cookie Clicker">Cookie Clicker</a>
+        <a data-href="Super_Mario_64.html" class="game-button" title="Super Mario 64">Super Mario 64</a>
+        <a data-href="My_Teardrop.html" class="game-button" title="My Teardrop">My Teardrop</a>
+        <a data-href="Ikachan.html" class="game-button" title="Ikachan">Ikachan</a>
+        <a data-href="Doom_and_doom_2.html" class="game-button" title="Doom and doom 2">Doom and doom 2</a>
+        <a data-href="Miku.html" class="game-button" title="halfne miku studio">halfne miku studio</a>
+        <a data-href="fancypants.html" class="game-button" title="Fancy Pants Adventure 1">Fancy Pants Adventure 1</a>
+        <a data-href="monkey-mart.html" class="game-button" title="Monkey Mart">Monkey Mart</a>
+        <a data-href="papaswingeria.html" class="game-button" title="Papa's Wingeria">Papa's Wingeria</a>
+        <a data-href="AcidBunny.html" class="game-button" title="Acid Bunny">Acid Bunny</a>
+        <a data-href="acidbunny2.html" class="game-button" title="Acid Bunny 2">Acid Bunny 2</a>
+        <a data-href="cheese.html" class="game-button" title="Papa's Cheeseria">Papa's Cheeseria</a>
+        <a data-href="pizza.html" class="game-button" title="Papa's Pizzeria">Papa's Pizzeria</a>
+        <a data-href="burger.html" class="game-button" title="Papa's Burgeria">Papa's Burgeria</a>
+        <a data-href="taco.html" class="game-button" title="Papa's Taco Mia">Papa's Taco Mia</a>
+        <a data-href="isaac.html" class="game-button" title="The binding of isaac">The binding of isaac</a>
+        <a data-href="alien.html" class="game-button" title="Alien Hominid">Alien Hominid</a>
+        <a data-href="touhou.html" class="game-button" title="touhou character creator">touhou character creator</a>
+        <a data-href="QCOV7445.MP4" class="game-button" title="the shrimpcredibals">the shrimpcredibals</a>
+        <a data-href="Little_alchemy.html" class="game-button" title="Little alchemy">Little alchemy</a>
+        <a data-href="Little_alchemy_2.html" class="game-button" title="Little alchemy 2">Little alchemy 2</a>
+        <a data-href="Cut_the_rope.html" class="game-button" title="Cut the rope">Cut the rope</a>
+        <a data-href="N-Gon.html" class="game-button" title="N-Gon">N-Gon</a>
+        <a data-href="Garfield.html" class="game-button" title="Garfield Comic Creator">Garfield Comic Creator</a>
+        <a data-href="Little_Man_Legends.html" class="game-button" title="Little Man Legends">Little Man Legends</a>
+        <a data-href="Jetpack_Joyride.html" class="game-button" title="JetPacj Joyride">JetPacj Joyride</a>
+        <a data-href="Eaglercraft_1.12_Offline_en_US.html" class="game-button" title="Eaglercraft">Eaglercraft</a>
+        <a data-href="JonnyUpgrade.html" class="game-button" title="Johnny upgrade">Johnny upgrade</a>
+        <a data-href="sm63.html" class="game-button" title="Super mario 63">Super mario 63</a>
+        <a data-href="raftwars.html" class="game-button" title="Raft Wars">Raft Wars</a>
+        <a data-href="raftwars2.html" class="game-button" title="Raft Wars 2">Raft Wars 2</a>
+        <a data-href="clfridaynightfunkin.html" class="game-button" title="Friday night funkin">Friday night funkin</a>
+        <a data-href="clhalflife.html" class="game-button" title="Half-Life">Half-Life</a>
+        <a data-href="clnzp.html" class="game-button" title="NZP">NZP</a>
+        <a data-href="clrun.html" class="game-button" title="Run 1">Run 1</a>
+        <a data-href="Burrito_Bison.html" class="game-button" title="Burrito Bison">Burrito Bison</a>
+        <a data-href="clrun3.html" class="game-button" title="Run 3">Run 3</a>
+        <a data-href="clparappatherapper.html" class="game-button" title="Parappa the rapper">Parappa the rapper</a>
+        <a data-href="cldadnme.html" class="game-button" title="Dad n me">Dad n me</a>
+        <a data-href="cldieinthedungeon.html" class="game-button" title="Die in the dungeon">Die in the dungeon</a>
+        <a data-href="Baldi's_Basics.html" class="game-button" title="Baldi's Basics">Baldi's Basics</a>
+        <a data-href="clyumenikki.html" class="game-button" title="Yume Nikki">Yume Nikki</a>
+        <a data-href="climpossiblequiz.html" class="game-button" title="The Impossible quiz">The Impossible quiz</a>
+        <a data-href="clbigicetowertinysquare.html" class="game-button" title="Big tower tiny square">Big tower tiny square</a>
+        <a data-href="clbtts2.html" class="game-button" title="Big tower tiny square 2">Big tower tiny square 2</a>
+        <a data-href="clshogunshowdown.html" class="game-button" title="shogun showdown">shogun showdown</a>
+        <a data-href="clwolfenstein.html" class="game-button" title="wolfenstein 3d">wolfenstein 3d</a>
+        <a data-href="cldukenukem3d.html" class="game-button" title="duke nukem 3d">duke nukem 3d</a>
+        <a data-href="Undertale_yellow.html" class="game-button" title="Undertale yellow">Undertale yellow</a>
+        <a data-href="just_one_boss.html" class="game-button" title="just one boss">just one boss</a>
+        <a data-href="clmariocombat.html" class="game-button" title="Mario Combat">Mario Combat</a>
+        <a data-href="Sonic_robo_blast_2.html" class="game-button" title="Sonic robo blast 2">Sonic robo blast 2</a>
+        <a data-href="srb2mods.html" class="game-button" title="Srb2 Mods">Srb2 Mods</a>
+        <a data-href="cldokidokiliteratureclub.html" class="game-button" title="Doki Doki litterature club">Doki Doki litterature club</a>
+        <a data-href="clmyfriendpedro.html" class="game-button" title="My friend pedro">My friend pedro</a>
+        <a data-href="clquake3.html" class="game-button" title="quake 3">quake 3</a>
+        <a data-href="cltosstheturtle.html" class="game-button" title="toss the turtle">toss the turtle</a>
+        <a data-href="clultrakill.html" class="game-button" title="ultrakill">ultrakill</a>
+      </nav>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll('.game-button');
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault(); 
+          const url = button.dataset.href;
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
